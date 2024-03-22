@@ -1,0 +1,21 @@
+package SmallNum;
+
+public class ZeroCount {
+
+	public static void main(String[] args) {
+		int[] num = { 4, 3, 0, 0 };
+		int count = 0;
+		boolean[] zeroIndex = new boolean[4];
+		
+		for (int i = 0; i < num.length; i++) {
+			if (num[i] == 0) {
+				count++;
+				zeroIndex[i] = true;
+			}
+
+		}
+		System.out.println(count);
+		System.out.println(zeroIndex);
+	}
+
+}

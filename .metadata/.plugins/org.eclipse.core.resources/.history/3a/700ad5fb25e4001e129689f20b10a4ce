@@ -1,0 +1,10 @@
+package scanner;
+
+public class ProductAdminEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

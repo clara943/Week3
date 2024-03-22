@@ -1,0 +1,10 @@
+package oop1;
+
+public class MusicPlayerMain1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+
+public class RecursiveCall {
+
+	static int factorial(int n) {
+		if (n > 0) {
+			return n * factorial(n - 1);
+		} else {
+			return 1;
+		}
+	}
+
+	static int forfactorial(int i) {
+		for (i = input(); i > 0; i--) {
+
+		}
+		return i *= (i - 1);
+
+	}
+
+	static int input() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("숫자를 입력해주세요: ");
+
+		int x = scanner.nextInt();
+		return x;
+	}
+
+	public static void main(String[] args) {
+
+		
+		factorial(input());
+		forfactorial(input());
+		
+
+	}
+}

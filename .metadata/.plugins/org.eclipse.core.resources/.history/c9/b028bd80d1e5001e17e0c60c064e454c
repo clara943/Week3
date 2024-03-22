@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BabyGin {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] cards = new int[6];
+
+        System.out.println("6개의 숫자를 입력하세요 (0부터 9까지):");
+        for (int i = 0; i < 6; i++) {
+            cards[i] = scanner.nextInt();
+        }
+
+        Arrays.sort(cards); // 입력된 숫자들을 정렬
+
+        if (isBabyGin(cards)) {
+            System.out.println("입력된 숫자는 Baby-Gin 입니다.");
+        } else {
+            System.out.println("입력된 숫자는 Baby-Gin이 아닙니다.");
+        }
+    }
+
+    // Baby-Gin 여부를 확인하는 함수
+    public static boolean isBabyGin(int[] cards) {
+        // Run 여부 확인
+        boolean run = (cards[0] == cards[1] + 1 && cards[1] == cards[2] + 1)
+                   || (cards[3] == cards[4] + 1 && cards[4] == cards[5] + 1);
+
+        // Triplete 여부 확인
+        boolean triplete = (cards[0] == cards[1] && cards[1] == cards[2])
+                        || (cards[3] == cards[4] && cards[4] == cards[5]);
+
+        return (run && triplete);
+    }
+}
